@@ -1,15 +1,21 @@
+globalString = "https://db4sgowjqfwig.cloudfront.net/images/4136367/elliot.PNG";
+
 const express = require('express')
 const app = express()
 app.use(express.static('public'))
+app.use(express.json());
+app.set('view engine', 'pug');
 
-globalString = "https://db4sgowjqfwig.cloudfront.net/images/4136367/elliot.PNG";
+app.get('/', function(req, res) {
+    //res.sendFile(__dirname + '/get.html');
+    res.redirect('/get.html');
+});
 
-app.get('/', (req, res) => res.send('Hello world!'))
-
-app.get("/setImage", function(req, res) {
-    globalString = req.query.string;
-    res.send("Set");
-})
+app.post("/setImage", function(req, res){
+    console.log(req.body);
+    globalString = req.body.imageUrl;
+    res.sendStatus(200);
+});
 
 app.get("/getImage", function(req, res) {
     res.send(globalString);
