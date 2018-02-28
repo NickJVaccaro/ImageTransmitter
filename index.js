@@ -4,11 +4,9 @@ const express = require('express')
 const app = express()
 app.use(express.static('public'))
 app.use(express.json());
-app.set('view engine', 'pug');
 
 app.get('/', function(req, res) {
-    //res.sendFile(__dirname + '/get.html');
-    res.redirect('/get.html');
+    res.redirect('/getImage.html');
 });
 
 app.post("/setImage", function(req, res){

@@ -16,6 +16,10 @@ app.controller('ctrl', function($scope, $http, $timeout) {
 
 app.controller('dmCtrl', function($scope, $http, $timeout){
 
+    function resetHttpState() {
+        $scope.httpState = "";
+    }
+
     $scope.setImage = function() {
         $scope.httpState = "Sending...";
 
@@ -26,8 +30,10 @@ app.controller('dmCtrl', function($scope, $http, $timeout){
         $http.post("./setImage", data)
         .then(function(response) {
             $scope.httpState = "Success!";
+            $timeout(resetHttpState, 3000);
         }, function(error) {
             $scope.httpState = "Failure";
+            $timeout(resetHttpState, 3000);
         });
     }
 });
