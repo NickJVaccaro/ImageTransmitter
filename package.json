@@ -1,0 +1,22 @@
+{
+  "name": "imagetransmitter",
+  "version": "1.0.0",
+  "description": "Easily transmit images from one device to another using a web browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickJVaccaro/ImageTransmitter.git"
+  },
+  "author": "Nick Vaccaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickJVaccaro/ImageTransmitter/issues"
+  },
+  "homepage": "https://github.com/NickJVaccaro/ImageTransmitter#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

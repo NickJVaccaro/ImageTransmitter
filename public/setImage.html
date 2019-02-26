@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+        <script src="./app.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body ng-app="app" ng-controller="dmCtrl">
+        <br/><br/>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <form>
+                        <div class="form-group">
+                            <label for="imageUrl">Image to Present Players</label>
+                            <input type="text" class="form-control" id="imageUrl" ng-model="imageUrl" placeholder="Image URL">
+                        </div>
+                        <button type="submit" ng-click="setImage()" class="btn btn-primary">Submit</button>
+                        {{httpState}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

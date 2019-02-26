@@ -1,0 +1,24 @@
+body {
+    animation: bgColor 6s infinite ease-in-out;
+}
+
+.image-parent {
+    height: 105%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    border-radius: 10px;
+    height: 90vh;
+}
+
+@keyframes bgColor {
+    0%, 100% {
+        background-color: black;
+    }
+    50% {
+        background-color: #09112e;
+    }
+}
